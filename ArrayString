@@ -1,0 +1,18 @@
+package pkgDay6;
+
+import java.util.*;
+
+public class ArrayString {
+
+	public static void main(String[] args) {
+		List<String> li1 = Arrays.asList("Drishti", "verma", "", "Ajay", "Verma", "");
+		Long l = li1.stream().filter(i -> i.isBlank()).count();
+		System.out.println("\nEmpty string count() of list: " + l);
+	}
+
+}
+
+
+OUTPUT =
+
+Empty string count() of list: 2
