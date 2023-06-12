@@ -27,6 +27,6 @@ public class CalculatorWithFI {
 
 OUTPUT = 
 Add = 5
-Subtract = 18
+Subtract = 3
 Multiply = 6
-Divide = 36
+Divide = 4
