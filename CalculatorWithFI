@@ -11,13 +11,13 @@ public class CalculatorWithFI {
 		BiFunction<Integer, Integer, Integer> add = (x, y) -> x + y;
 		System.out.println("Add = " + add.apply(2, 3));
 
-		BiFunction<Integer, Integer, Integer> subtract = (x, y) -> x * y;
+		BiFunction<Integer, Integer, Integer> subtract = (x, y) -> x - y;
 		System.out.println("Subtract = " + subtract.apply(6, 3));
 		
 		BiFunction<Integer, Integer, Integer> multiply = (x, y) -> x * y;
 		System.out.println("Multiply = " + multiply.apply(2, 3));
 		
-		BiFunction<Integer, Integer, Integer> divide = (x, y) -> x * y;
+		BiFunction<Integer, Integer, Integer> divide = (x, y) -> x / y;
 		System.out.println("Divide = " + divide.apply(12, 3));
 
 	}
