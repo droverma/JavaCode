@@ -1,0 +1,33 @@
+package pkgDay10;
+
+import java.util.Scanner;
+import java.util.regex.*;
+
+public class RegExEg1 {
+
+	public static void main(String[] args) {
+		Pattern date = Pattern.compile("^([0-2][0-9]||3[0-1])/(0[0-9]||1[0-2])/([0-9][0-9])?[0-9][0-9]$");
+		System.out.println("Enter the date:");
+		Scanner sc=new Scanner(System.in);
+		String date1 = sc.next();
+		Matcher match = date.matcher(date1);
+		boolean b = match.matches();
+		System.out.println(b);
+	}
+
+}
+
+OUTPUT - 
+
+Enter the date:
+11/08/98
+Date should be DD/MM/YY :true
+
+Enter the date:
+11/31/98
+Date should be DD/MM/YY :false
+
+Enter the date:
+32/08/20
+Date should be DD/MM/YY :false
+
