@@ -85,3 +85,19 @@ public class User2 implements Runnable {
 	}
 
 }
+
+
+
+
+
+OUTPUT - 
+
+Person1: Hii
+Person2: Hiii
+Person1: How are you?
+Person2: I'm fine 
+Person1: What are you doing?
+Person2: Nothing
+Person1: How was you day?.
+Person2: Well spend
+Person1: Bye!
