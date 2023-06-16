@@ -1,0 +1,52 @@
+package pkgDay6;
+
+public class CalculatorWithAnanymous {
+	interface MathOp {
+		int operation(int x, int y);
+	}
+
+	public static void main(String[] args) {
+		int data;
+		MathOp add = new MathOp() {
+			public int operation(int x, int y) {
+				return x + y;
+			}
+		};
+		data = add.operation(5, 5);
+		System.out.print("Add = " + data);
+
+		MathOp sub = new MathOp() {
+			public int operation(int x, int y) {
+				return x - y;
+			}
+		};
+		data = sub.operation(10, 5);
+		System.out.print("\nSubtract = " + data);
+
+		MathOp mul = new MathOp() {
+			public int operation(int x, int y) {
+				return x * y;
+			}
+		};
+		data = mul.operation(5, 5);
+		System.out.print("\nMultiply = " + data);
+
+		MathOp div = new MathOp() {
+			public int operation(int x, int y) {
+				return x / y;
+			}
+		};
+		data = div.operation(10, 5);
+		System.out.print("\nDivide = " + data);
+
+	}
+
+}
+
+
+OUTPUT = 
+
+Add = 10
+Subtract = 5
+Multiply = 25
+Divide = 2
