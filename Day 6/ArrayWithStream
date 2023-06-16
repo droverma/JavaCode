@@ -1,0 +1,24 @@
+package pkgDay6;
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class ArrayWithStream {
+
+	public static void main(String[] args) {
+		List<Integer> li1 = Arrays.asList(1, 2, 13, 47, 5, 6, 13, 2);
+		System.out.print("all odd numbers from the list\n");
+		li1.stream().filter(e -> e % 2 != 0).forEach(e -> System.out.print(e + ", "));
+		System.out.print("\nall the associated values along with it’s square from the list\n");
+		li1.stream().peek(e -> System.out.print(e + ", ")).collect(Collectors.toList());
+		System.out.println("\n" + li1);
+		System.out.print("Use Stream API’s peek, map, and forEach\n");
+		li1.stream().map(e -> e).forEach(e -> System.out.print(e + ", "));
+	}
+
+}
+
+OUTPUT = 
+1, 13, 47, 5, 13, 1, 2, 13, 47, 5, 6, 13, 2, 
+[1, 2, 13, 47, 5, 6, 13, 2]
+1, 2, 13, 47, 5, 6, 13, 2, 
