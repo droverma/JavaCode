@@ -1,0 +1,1 @@
+package pkgDay.designPatterns.pkgStructural;
