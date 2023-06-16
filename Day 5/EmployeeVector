@@ -1,0 +1,21 @@
+package pkgDay5;
+
+import java.util.Vector;
+
+public class EmployeeVector {
+	public static void main(String a[]) {
+		Employee e = new Employee();
+		Vector<Employee> vct = new Vector<Employee>();
+		e = new Employee(1, "Dro");
+		vct.add(e);
+		System.out.print(e.toString());
+		e = new Employee(2, "Ajay");
+		vct.add(e);
+		System.out.print(e.toString());
+
+	}
+}
+------------------------
+
+OutPut - 
+Employee [id=1, name=Dro]Employee [id=2, name=Ajay]
