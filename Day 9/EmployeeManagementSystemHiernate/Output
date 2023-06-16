@@ -1,0 +1,139 @@
+
+Menu:
+1.Add Employee
+2.Update Employee
+3.Display Employee
+4.Delete Employee5
+5.Exit
+Enter choice:(1-5)
+3
+Jun 16, 2023 6:21:14 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate ORM core version 5.4.28.Final
+Jun 16, 2023 6:21:14 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+Jun 16, 2023 6:21:15 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+Jun 16, 2023 6:21:15 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/hiltonHotel]
+Jun 16, 2023 6:21:15 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001001: Connection properties: {password=****, user=root}
+Jun 16, 2023 6:21:15 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001003: Autocommit mode: false
+Jun 16, 2023 6:21:15 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
+Jun 16, 2023 6:21:15 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Jun 16, 2023 6:21:16 PM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2d272b0d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+Hibernate: select employee0_.employee_id as employee1_0_, employee0_.designation as designat2_0_, employee0_.employee_name as employee3_0_, employee0_.salary as salary4_0_ from EMPLOYEE employee0_
+[
+Employee [employee_id=5, employee_name=Megha, designation=Tester, salary=600000.0], 
+Employee [employee_id=6, employee_name=Monica, designation=Developer, salary=1.2E7]]
+Menu:
+1.Add Employee
+2.Update Employee
+3.Display Employee
+4.Delete Employee5
+5.Exit
+Enter choice:(1-5)
+1
+What is the Employee Name ? Drishti
+What is the Designation ? Developer
+What is the Salary ? 1234
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Inserted Successfully
+Hibernate: insert into EMPLOYEE (designation, employee_name, salary, employee_id) values (?, ?, ?, ?)
+
+Menu:
+1.Add Employee
+2.Update Employee
+3.Display Employee
+4.Delete Employee5
+5.Exit
+Enter choice:(1-5)
+3
+Hibernate: select employee0_.employee_id as employee1_0_, employee0_.designation as designat2_0_, employee0_.employee_name as employee3_0_, employee0_.salary as salary4_0_ from EMPLOYEE employee0_
+[
+Employee [employee_id=5, employee_name=Megha, designation=Tester, salary=600000.0], 
+Employee [employee_id=6, employee_name=Monica, designation=Developer, salary=1.2E7], 
+Employee [employee_id=7, employee_name=Drishti, designation=Developer, salary=1234.0]]
+Menu:
+1.Add Employee
+2.Update Employee
+3.Display Employee
+4.Delete Employee5
+5.Exit
+Enter choice:(1-5)
+2
+What is the Employee id ? 5
+Hibernate: select employee0_.employee_id as employee1_0_0_, employee0_.designation as designat2_0_0_, employee0_.employee_name as employee3_0_0_, employee0_.salary as salary4_0_0_ from EMPLOYEE employee0_ where employee0_.employee_id=?
+
+ datatatatatta
+[
+Employee [employee_id=5, employee_name=Megha, designation=Tester, salary=600000.0]]
+What is the new Employee Name Monica
+What is the new Designation ? Trainer
+What is the new Salary ? 234567000
+Record Updated Successfully
+
+Employee List:
+Employee [employee_id=5, employee_name=Monica, designation=Trainer, salary=2.34567E8]
+
+Employee [employee_id=5, employee_name=Monica, designation=Trainer, salary=2.34567E8]
+5
+Hibernate: select employee0_.employee_id as employee1_0_0_, employee0_.designation as designat2_0_0_, employee0_.employee_name as employee3_0_0_, employee0_.salary as salary4_0_0_ from EMPLOYEE employee0_ where employee0_.employee_id=?
+Updated Successfully
+Hibernate: update EMPLOYEE set designation=?, employee_name=?, salary=? where employee_id=?
+
+Menu:
+1.Add Employee
+2.Update Employee
+3.Display Employee
+4.Delete Employee5
+5.Exit
+Enter choice:(1-5)
+3
+Hibernate: select employee0_.employee_id as employee1_0_, employee0_.designation as designat2_0_, employee0_.employee_name as employee3_0_, employee0_.salary as salary4_0_ from EMPLOYEE employee0_
+[
+Employee [employee_id=5, employee_name=Monica, designation=Trainer, salary=2.34567E8], 
+Employee [employee_id=6, employee_name=Monica, designation=Developer, salary=1.2E7], 
+Employee [employee_id=7, employee_name=Drishti, designation=Developer, salary=1234.0]]
+Menu:
+1.Add Employee
+2.Update Employee
+3.Display Employee
+4.Delete Employee5
+5.Exit
+Enter choice:(1-5)
+4
+What is the Employee id ? 7
+Hibernate: select employee0_.employee_id as employee1_0_0_, employee0_.designation as designat2_0_0_, employee0_.employee_name as employee3_0_0_, employee0_.salary as salary4_0_0_ from EMPLOYEE employee0_ where employee0_.employee_id=?
+[
+Employee [employee_id=7, employee_name=Drishti, designation=Developer, salary=1234.0]]Hibernate: select employee0_.employee_id as employee1_0_0_, employee0_.designation as designat2_0_0_, employee0_.employee_name as employee3_0_0_, employee0_.salary as salary4_0_0_ from EMPLOYEE employee0_ where employee0_.employee_id=?
+Deleted Successfully
+Hibernate: delete from EMPLOYEE where employee_id=?
+
+Menu:
+1.Add Employee
+2.Update Employee
+3.Display Employee
+4.Delete Employee5
+5.Exit
+Enter choice:(1-5)
+3
+Hibernate: select employee0_.employee_id as employee1_0_, employee0_.designation as designat2_0_, employee0_.employee_name as employee3_0_, employee0_.salary as salary4_0_ from EMPLOYEE employee0_
+[
+Employee [employee_id=5, employee_name=Monica, designation=Trainer, salary=2.34567E8], 
+Employee [employee_id=6, employee_name=Monica, designation=Developer, salary=1.2E7]]
+Menu:
+1.Add Employee
+2.Update Employee
+3.Display Employee
+4.Delete Employee5
+5.Exit
+Enter choice:(1-5)
+5
+
+Thank you for using the program. Goodbye!
