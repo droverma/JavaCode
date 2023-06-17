@@ -1,0 +1,31 @@
+//WAP in JDBC to insert name and emailid in a table Register in MySQL
+	
+package pkgDay10;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class TableJDBC {
+	public Connection getCon() throws Exception {
+		Class.forName("com.mysql.jdbc.Driver");
+		return DriverManager.getConnection("jdbc:mysql://localhost:3306/hiltonHotel", "root", "root");
+	}
+
+	public void insert(int id, String name, String email) {
+		String v = "'" + name + "', '" + email+"'";
+		String sql = "insert into reg values (" + v + ")";
+		System.out.println(sql);
+		try (Connection conn = getCon()) {
+			System.out.println(conn.createStatement().executeUpdate(sql) + " records inserted");
+		} catch (Exception e1) {
+			System.out.println(e1);
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TableJDBC tb = new TableJDBC();
+		tb.insert(5, "Drishti", "drishti@gmail.com");
+	}
+
+}
