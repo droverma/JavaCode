@@ -1,15 +1,12 @@
 package Client;
 
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 import model.Employee;
 import service.EmployeeService;
 
 public class Main {
 	Scanner scan = new Scanner(System.in);
-	ArrayList<Employee> empList = new ArrayList<Employee>();
-
+	
 	void menu() {
 		System.out.println("\nMenu:");
 		System.out.println("1.Add Employee\n2.Update Employee\n3.Display Employee\n4.Delete Employee5\n5.Exit");
